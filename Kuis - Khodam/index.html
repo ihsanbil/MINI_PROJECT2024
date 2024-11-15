@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Cek Khodam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cek Khodam Kamu</h1>
+        <p>Jawab pertanyaan-pertanyaan berikut untuk mengetahui jenis khodam yang sesuai dengan kepribadian Anda!</p>
+
+        <!-- Pertanyaan 1 -->
+        <p>Apakah Anda lebih suka menyendiri atau berada di keramaian?</p>
+        <button onclick="answer('sendiri', this)">Menyendiri</button>
+        <button onclick="answer('ramai', this)">Di Keramaian</button>
+
+        <!-- Pertanyaan 2 -->
+        <p>Bagaimana perasaan Anda terhadap alam atau tempat-tempat sunyi?</p>
+        <button onclick="answer('suka', this)">Suka</button>
+        <button onclick="answer('tidak', this)">Tidak Suka</button>
+
+        <!-- Pertanyaan 3 -->
+        <p>Pilih warna yang paling resonan dengan diri Anda:</p>
+        <button onclick="answer('merah', this)">Merah</button>
+        <button onclick="answer('biru', this)">Biru</button>
+        <button onclick="answer('hijau', this)">Hijau</button>
+
+        <br><br>
+        <button onclick="getResult()">Lihat Hasil</button>
+
+        <div id="result"></div>
+        <img id="khodamImage" src="" alt="Gambar Khodam">
+    </div>
+
+    <script>
+        const answers = [];
+
+        function answer(value, button) {
+            answers.push(value);
+            button.classList.add('clicked'); // Tambahkan kelas 'clicked' pada tombol yang diklik
+        }
+
+        function getResult() {
+            let khodamType = "";
+            let khodamImage = "";
+
+            // Evaluasi berdasarkan jawaban
+            if (answers.includes('sendiri') && answers.includes('suka')) {
+                khodamType = "Khodam Penjaga";
+                khodamImage = "k1.jpeg"; // Gambar untuk Khodam Penjaga
+            } else if (answers.includes('ramai') && answers.includes('hijau')) {
+                khodamType = "Khodam Penyembuh";
+                khodamImage = "m1.jpeg"; // Gambar untuk Khodam Penyembuh
+            } else {
+                khodamType = "Khodam Bijak";
+                khodamImage = "s1.jpeg"; // Gambar untuk Khodam Bijak
+            }
+
+            // Menampilkan hasil
+            document.getElementById("result").innerText = `Hasil: ${khodamType}`;
+            const imageElement = document.getElementById("khodamImage");
+            imageElement.src = khodamImage;
+
+            // Menambahkan animasi untuk gambar
+            imageElement.style.display = "block"; // Menampilkan gambar
+            setTimeout(() => {
+                imageElement.style.opacity = 1; // Membuat gambar muncul perlahan
+                imageElement.style.transform = "scale(1)"; // Membesarkan gambar secara perlahan
+            }, 100); // Menunggu sedikit sebelum memulai animasi
+
+            // Reset warna tombol setelah hasil ditampilkan
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.classList.remove('clicked'); // Menghapus kelas 'clicked' untuk semua tombol
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<<<<<<< HEAD
+/* Warna dasar latar belakang */
+body {
+    background-color: #e5e5e5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout kontainer utama agar tampil di tengah */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kartu latar belakang hitam */
+.card {
+    width: 500px;
+    background-color: #343a40;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* Ukuran tetap untuk kolom riwayat transaksi */
+.card {
+    height: 600px; /* Ukuran tetap */
+}
+
+/* Gaya untuk list transaksi agar ada scroll ketika daftar bertambah */
+#list {
+    max-height: 400px; /* Batasi tinggi list transaksi */
+    overflow-y: auto;  /* Tambahkan scroll jika daftar melebihi tinggi */
+    padding: 10px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.list-group-item {
+    background-color: #333;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+/* Kartu Riwayat dan Pencatat Anggaran memiliki ukuran yang sama */
+.card-body {
+    height: 100%;
+}
+
+
+
+/* Gaya teks untuk saldo dan elemen keuangan */
+h2, h4 {
+    color: #f1c40f;
+}
+
+.balance h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.income-box, .expense-box {
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #222;
+}
+
+/* Teks besar dan jelas */
+.money {
+    font-size: 1.5rem;
+}
+
+/* Input form */
+form input {
+    background-color: #333;
+    color: white;
+}
+
+form input::placeholder {
+    color: #ddd;
+}
+
+form label {
+    color: #ddd;
+}
+
+/* Tombol biru */
+.btn-primary {
+    background-color: #2980b9;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+/* Gaya daftar transaksi */
+.list-group-item {
+    background-color: #333;
+    color: white;
+}
+
+=======
+/* Warna dasar latar belakang */
+body {
+    background-color: #e5e5e5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout kontainer utama agar tampil di tengah */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kartu latar belakang hitam */
+.card {
+    width: 500px;
+    background-color: #343a40;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* Ukuran tetap untuk kolom riwayat transaksi */
+.card {
+    height: 600px; /* Ukuran tetap */
+}
+
+/* Gaya untuk list transaksi agar ada scroll ketika daftar bertambah */
+#list {
+    max-height: 400px; /* Batasi tinggi list transaksi */
+    overflow-y: auto;  /* Tambahkan scroll jika daftar melebihi tinggi */
+    padding: 10px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.list-group-item {
+    background-color: #333;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+/* Kartu Riwayat dan Pencatat Anggaran memiliki ukuran yang sama */
+.card-body {
+    height: 100%;
+}
+
+
+
+/* Gaya teks untuk saldo dan elemen keuangan */
+h2, h4 {
+    color: #f1c40f;
+}
+
+.balance h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.income-box, .expense-box {
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #222;
+}
+
+/* Teks besar dan jelas */
+.money {
+    font-size: 1.5rem;
+}
+
+/* Input form */
+form input {
+    background-color: #333;
+    color: white;
+}
+
+form input::placeholder {
+    color: #ddd;
+}
+
+form label {
+    color: #ddd;
+}
+
+/* Tombol biru */
+.btn-primary {
+    background-color: #2980b9;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+/* Gaya daftar transaksi */
+.list-group-item {
+    background-color: #333;
+    color: white;
+}
+
+>>>>>>> 3cd3e5f3efdfedb3b84c5cd44ab6fd243193e592

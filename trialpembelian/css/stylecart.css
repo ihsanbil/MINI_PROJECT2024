@@ -1,0 +1,13 @@
+.cart-summary {
+    margin-top: 20px;
+}
+.cart-summary h4 {
+    margin-top: 20px;
+}
+img {
+    max-width: 80px;
+    height: auto;
+}
+.delete-btn {
+    color: white;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Event</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Upcoming Events</h2>
+            <ul class="event-list"></ul>
+            <div class="event-form">
+                <h3>Add or Edit Event</h3>
+                <form id="eventForm" onsubmit="addEvent(event)">
+                    <input type="hidden" id="event-id">
+                    <input type="text" id="event-title" placeholder="Event Title" required>
+                    <input type="date" id="event-date" required>
+                    <button type="submit">Save Event</button>
+                    <button type="button" onclick="deleteEvent()">Delete Event</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="calendar">
+            <div class="month">
+                <i class="fa fa-angle-left prev" onclick="changeMonth(-1)"></i>
+                <div class="date">November 2024</div>
+                <i class="fa fa-angle-right next" onclick="changeMonth(1)"></i>
+            </div>
+            
+
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+
+            <div class="days"></div>
+            <br>
+            <div class="holiday-list"></div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

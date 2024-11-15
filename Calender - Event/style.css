@@ -1,0 +1,383 @@
+<<<<<<< HEAD
+:root {
+    --primary-clr: #b38add;
+    --secondary-clr: #878855;
+    --bg-light: #ede1dc;
+    --bg-dark: #373c4f;
+    --text-light: #fff;
+    --text-dark: #333;
+    --holiday-color: #ff4d4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-light);
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    width: 800px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-dark);
+    border-radius: 10px;
+    color: var(--text-light);
+}
+
+.event-form {
+    background-color: #2c2f3a;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--text-light);
+    margin-top: 20px;
+}
+
+.event-form input,
+.event-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.event-form button {
+    background-color: var(--primary-clr);
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.left {
+    flex: 1;
+    background-color: #2c2f3a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border-radius: 5px;
+}
+
+.calendar {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--text-dark);
+    max-width: 500px;
+}
+
+.calendar .month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+}
+
+.calendar .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    color: var(--secondary-clr);
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--text-dark);
+}
+
+.days div {
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.days div.sunday {
+    color: var(--holiday-color);
+}
+
+.days div.holiday {
+    background-color: var(--holiday-color);
+    color: var(--text-light);
+}
+
+.days .event-day {
+    background-color: var(--primary-clr);
+    color: var(--text-light);
+}
+
+.days .event-day:hover {
+    background-color: #9b6dcf;
+}
+
+.day-header {
+    font-weight: bold;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.holiday {
+    color: red; /* Ubah warna tanggal libur nasional menjadi merah */
+    font-weight: bold; /* Membuat teks libur lebih menonjol */
+}
+
+.holiday-item {
+    color: darkgreen; /* Warna untuk daftar libur nasional */
+    margin: 5px 0; /* Memberikan jarak antara item libur */
+}
+
+.sunday {
+    color: red; /* Merah untuk hari Minggu */
+}
+
+.event-day {
+    background-color: #add8e6; /* Biru muda untuk hari event */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .calendar, .left {
+        width: 100%;
+    }
+}
+=======
+:root {
+    --primary-clr: #b38add;
+    --secondary-clr: #878855;
+    --bg-light: #ede1dc;
+    --bg-dark: #373c4f;
+    --text-light: #fff;
+    --text-dark: #333;
+    --holiday-color: #ff4d4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-light);
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    width: 800px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-dark);
+    border-radius: 10px;
+    color: var(--text-light);
+}
+
+.event-form {
+    background-color: #2c2f3a;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--text-light);
+    margin-top: 20px;
+}
+
+.event-form input,
+.event-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.event-form button {
+    background-color: var(--primary-clr);
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.left {
+    flex: 1;
+    background-color: #2c2f3a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.left h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border-radius: 5px;
+}
+
+.calendar {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--text-dark);
+    max-width: 500px;
+}
+
+.calendar .month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+}
+
+.calendar .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    color: var(--secondary-clr);
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--text-dark);
+}
+
+.days div {
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.days div.sunday {
+    color: var(--holiday-color);
+}
+
+.days div.holiday {
+    background-color: var(--holiday-color);
+    color: var(--text-light);
+}
+
+.days .event-day {
+    background-color: var(--primary-clr);
+    color: var(--text-light);
+}
+
+.days .event-day:hover {
+    background-color: #9b6dcf;
+}
+
+.day-header {
+    font-weight: bold;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.holiday {
+    color: red; /* Ubah warna tanggal libur nasional menjadi merah */
+    font-weight: bold; /* Membuat teks libur lebih menonjol */
+}
+
+.holiday-item {
+    color: darkgreen; /* Warna untuk daftar libur nasional */
+    margin: 5px 0; /* Memberikan jarak antara item libur */
+}
+
+.sunday {
+    color: red; /* Merah untuk hari Minggu */
+}
+
+.event-day {
+    background-color: #add8e6; /* Biru muda untuk hari event */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .calendar, .left {
+        width: 100%;
+    }
+}
+>>>>>>> 3cd3e5f3efdfedb3b84c5cd44ab6fd243193e592
