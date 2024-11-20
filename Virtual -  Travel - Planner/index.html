@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Virtual Travel Planner</h1>
+    </header>
+    <main class="container">
+        <!-- Pencarian Destinasi -->
+        <section class="search-section">
+            <div class="section-title">
+                <h2>Cari Destinasi</h2>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-destination" placeholder="Masukkan destinasi">
+                <button id="search-btn"><i class="fas fa-search"></i> Cari</button>
+            </div>
+        </section>
+    
+        <!-- Peta -->
+        <section class="map-section">
+            <div class="section-title">
+                <h2>Peta Destinasi</h2>
+            </div>
+            <div id="map"></div>
+        </section>
+    
+        <!-- Informasi Cuaca -->
+        <section class="info-section">
+            <div class="section-title">
+                <h2>Informasi Cuaca</h2>
+            </div>
+            <div id="weather-info">
+                <p>Silakan pilih destinasi untuk melihat cuaca.</p>
+            </div>
+        </section>
+    
+        <!-- Rekomendasi Tempat -->
+        <section class="places-section">
+            <div class="section-title">
+                <h2>Rekomendasi Tempat</h2>
+            </div>
+            <div id="places-info">
+                <p>Silakan pilih destinasi untuk melihat rekomendasi tempat wisata/restoran.</p>
+            </div>
+        </section>
+    
+        <!-- Itinerary -->
+        <section class="itinerary-section">
+            <div class="section-title">
+                <h2>Rencana Perjalanan</h2>
+            </div>
+            <form id="itinerary-form">
+                <input type="text" id="itinerary-input" placeholder="Tambahkan destinasi ke itinerary">
+                <input type="date" id="itinerary-date" required>
+                <input type="text" id="itinerary-activity" placeholder="Aktivitas" required>
+                <input type="text" id="itinerary-transport" placeholder="Transportasi" required>
+                <input type="text" id="itinerary-accommodation" placeholder="Akomodasi" required>
+                <button type="submit"><i class="fas fa-plus"></i></button>
+            </form>
+            <ul id="itinerary-list"></ul>
+        </section>
+    </main>    
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

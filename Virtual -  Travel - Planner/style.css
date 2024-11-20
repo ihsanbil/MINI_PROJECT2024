@@ -1,0 +1,276 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dan background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animasi Fade In untuk Header */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main container */
+main.container {
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-out;
+}
+
+/* Animasi untuk konten masuk (Slide Up) */
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Setiap section judul */
+.section-title h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Style untuk form pencarian */
+.search-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.search-bar button i {
+    margin-right: 8px;
+}
+
+/* Peta */
+#map {
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuaca dan Info Tempat */
+#weather-info, #places-info {
+    padding: 20px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#places-info p, #weather-info p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Daftar itinerary */
+/* Form itinerary */
+/* Form itinerary */
+#itinerary-form {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    border-radius: 10px; /* Menambahkan border-radius pada form */
+    padding: 15px; /* Padding agar border-radius terlihat */
+    background-color: #fff; /* Latar belakang putih agar terlihat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek 3D */
+    overflow: hidden; /* Menjaga konten di dalam form tetap dalam batas border-radius */
+}
+
+/* Input fields di dalam form itinerary */
+#itinerary-destination, #itinerary-date, #itinerary-activity,
+#itinerary-transport, #itinerary-accommodation {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    flex: 1;
+    box-sizing: border-box; /* Agar padding dan border tidak keluar dari ukuran box */
+}
+
+/* Tombol submit di form itinerary */
+#itinerary-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center; /* Menjaga ikon dan teks sejajar secara vertikal */
+    justify-content: center; /* Menjaga ikon dan teks sejajar secara horizontal */
+    min-width: 50px; /* Menambahkan lebar minimum untuk memastikan tombol tetap cukup besar */
+    height: 50px; /* Menentukan tinggi tombol agar ikonnya tidak terjepit */
+}
+
+/* Ikon dalam tombol tambah */
+#itinerary-form button i {
+    margin-right: 0; /* Menghapus margin kanan agar ikon berada di tengah */
+    font-size: 1.5rem; /* Menyesuaikan ukuran ikon agar sesuai dengan tombol */
+}
+
+
+/* Daftar itinerary */
+#itinerary-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    border-radius: 8px; /* Menambahkan border-radius pada daftar itinerary */
+    background-color: #fff; /* Latar belakang putih untuk daftar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan agar lebih elegan */
+    overflow: hidden; /* Menjaga agar konten di dalam daftar tidak keluar dari batas */
+}
+
+#itinerary-list li {
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    overflow: hidden; /* Menjaga agar konten tidak keluar dari daftar */
+}
+/* Flexbox untuk menata tombol Edit dan Hapus */
+#itinerary-list li .button-container {
+    display: flex;
+    gap: 5px;
+}
+
+/* Styling untuk tombol Edit dan Hapus */
+#itinerary-list li button {
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;  /* Lebar tombol disesuaikan dengan ukuran ikon */
+    height: 35px; /* Tinggi tombol disesuaikan dengan ukuran ikon */
+}
+
+/* Styling untuk tombol Edit */
+#itinerary-list li .edit-button {
+    background-color: #ffc107;
+    color: white;
+}
+
+#itinerary-list li .edit-button:hover {
+    background-color: #e0a800;
+}
+
+/* Styling untuk tombol Hapus */
+#itinerary-list li .remove-button {
+    background-color: #e63946;
+    color: white;
+}
+
+#itinerary-list li .remove-button:hover {
+    background-color: #d62828;
+}
+
+/* Ikon */
+#itinerary-list li .edit-button i,
+#itinerary-list li .remove-button i {
+    font-size: 1.2rem; /* Ukuran ikon */
+}
+
+/* Responsif jika diperlukan */
+@media (max-width: 768px) {
+    #itinerary-list li button {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    main.container {
+        padding: 15px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    #weather-info, #places-info {
+        padding: 15px;
+    }
+
+    #itinerary-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
