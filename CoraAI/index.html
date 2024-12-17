@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoraAI</title>
+    <!-- CDN Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header dengan Suggestion List -->
+    <header class="header">
+        <h2 class="title">Hello, Sahabat Cora</h2>
+        <h2 class="subtitle">Ada yang bisa saya bantu?</h2>
+
+        <ul class="suggestion-list">
+            <li class="suggestion">
+                <h4 class="text">Help me plan a game night with my 5 best friends for under $100.</h4>
+                <span class="icon material-symbols-rounded">draw</span>
+            </li>
+            <li class="suggestion">
+                <h4 class="text">What are the best tips to improve my public speaking skills?</h4>
+                <span class="icon material-symbols-rounded">lightbulb</span>
+            </li>
+            <li class="suggestion">
+                <h4 class="text">Can you help me find the latest news on web development?</h4>
+                <span class="icon material-symbols-rounded">explore</span>
+            </li>
+            <li class="suggestion">
+                <h4 class="text">Write JavaScript code to sum all elements in an array.</h4>
+                <span class="icon material-symbols-rounded">code</span>
+            </li>
+        </ul>        
+    </header>
+
+    <!-- Tempat untuk Chat -->
+    <div class="chat-list"></div>
+
+    <!-- Area untuk Input -->
+    <div class="typing-area">
+        <form action="#" class="typing-form" id="upload-form">
+            <div class="input-wrapper">
+                <input type="text" placeholder="Enter a prompt here" class="typing-input" required>
+                <button type="submit" class="icon material-symbols-rounded">send</button>
+            </div>
+            <div class="action-buttons">
+                <span id="image-prompt" class="icon material-symbols-rounded">image</span>
+                <span id="toggle-theme-button" class="icon material-symbols-rounded">light_mode</span>
+                <span id="delete-chat-button" class="icon material-symbols-rounded">delete</span>
+            </div>
+        </form>
+        <p class="disclaimer-text">
+            CoraAI may display inaccurate info, including about people, so double-check its responses.
+        </p>
+    </div>
+
+    <!-- Avatar Placeholder untuk JS -->
+    <img src="Cora.png" style="display: none;" alt="AI Avatar">
+    <img src="Avatar.jpg" style="display: none;" alt="User Avatar">
+
+    <!-- Input file untuk gambar -->
+    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+
+    <script src="script.js"></script>
+</body>
+</html>
